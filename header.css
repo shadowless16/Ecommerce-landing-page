@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: white;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+h1 {
+    color: orange;
+}
+
+h1:hover {
+    cursor: pointer;
+}
+
+.search-bar {
+    margin-left: 100px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 400px;
+    border-radius: 8px;
+    border: 1px solid gray;
+    margin-right: 2%;
+}
+
+.search-bar button {
+    padding: 12px;
+    cursor: pointer;
+    border-style: none;
+    border-radius: 8px;
+}
+
+.search-bar button:active {
+    background-color: bisque;
+}
+
+.search-bar button:hover {
+    background-color: orange;
+}
+
+nav{
+    margin-top: 30px;
+    margin-left: 200px;
+    margin-bottom: 20px;
+    padding: 8px;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+nav a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: end;
+    font-size: 24px;
+}
+
+a:hover {
+    color: orange;
+}
+
+/* Your existing CSS */
+
+/* Hamburger menu icon */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: orange;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+/* Logo and Navigation Links */
+.logo {
+    order: 2; /* This places the logo on the right */
+}
+
+.nav-links {
+    order: 1; /* This places the menu on the left */
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: flex; /* Show the menu icon on smaller screens */
+    }
+
+    .nav-links {
+        display: none; /* Hide the navigation links */
+    }
+
+    /* When menu icon is clicked, show the navigation links */
+    .menu-icon.active + .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: white;
+        border: 1px solid gray;
+        border-radius: 8px;
+        width: 200px;
+        padding: 10px;
+    }
+
+    .bar.active1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .bar.active2 {
+        opacity: 0;
+    }
+
+    .bar.active3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
