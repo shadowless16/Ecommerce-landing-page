@@ -57,6 +57,42 @@
     border-radius: 5px;
 }
 
+.product-catalog {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.product-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-card h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 1em;
+    color: #333;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
 @media (max-width: 1024px) {
     .main-content {
         grid-template-columns: 1fr 2fr 1fr;
