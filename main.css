@@ -26,11 +26,26 @@
     font-weight: bold;
     display: flex;
     align-items: center;
+    font-size: 16px; /* Adjust the font size to your preference */
+    padding: 8px;
+    transition: color 0.3s ease;
 }
 
 .categories a:hover {
     color: #ff6600;
 }
+
+.categories i {
+    margin-right: 10px; /* Space between the icon and the text */
+    font-size: 20px; /* Adjust the icon size if necessary */
+    color: #666; /* Icon color */
+    transition: color 0.3s ease;
+}
+
+.categories a:hover i {
+    color: #ff6600;
+}
+
 
 .promo-banner img {
     width: 100%;
@@ -61,36 +76,43 @@
     display: grid;
     gap: 20px;
     padding: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ensures responsiveness */
 }
 
 .product-card {
-    background-color: #f9f9f9;
+    background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 16px;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .product-card img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
+    object-fit: contain; /* Ensures image aspect ratio is maintained */
+    width: 100%;
+    height: 200px; /* Set uniform height for all images */
 }
 
 .product-card h2 {
     font-size: 1.2em;
-    margin: 10px 0;
+    margin: 15px 0 10px;
+    color: #333;
 }
 
 .product-card p {
     font-size: 1em;
-    color: #333;
-}
-
-.product-card:hover {
-    transform: scale(1.05);
+    color: #ff6600; /* Jumia-like orange color for price */
+    font-weight: bold;
 }
 
 @media (max-width: 1024px) {
