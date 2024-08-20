@@ -81,7 +81,8 @@
 
 /* Styles for the product grid */
 
-.flash-sale-header {
+.flash-sale-header,
+.limited-offers-header {
     background-color: #ff6600;
     background-color: #ff0000;
     color: white;
@@ -89,6 +90,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.phone-deals-header {
+    background-color: #ff6600;
+    background-color: #ff0000;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 13px;
 }
 
 .timer {
@@ -110,7 +122,8 @@
     background-color: #ff9900;
 }
 
-.product-grid {
+.product-grid,
+.limited-offers {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 20px;
@@ -182,7 +195,8 @@
     margin-bottom: 20px;
 }
 
-.category-grid {
+.category-grid,
+.phone-deals {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 20px;
