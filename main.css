@@ -123,7 +123,8 @@
 }
 
 .product-grid,
-.limited-offers {
+.limited-offers,
+.phone-deals {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 20px;
@@ -195,8 +196,7 @@
     margin-bottom: 20px;
 }
 
-.category-grid,
-.phone-deals {
+.category-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 20px;
